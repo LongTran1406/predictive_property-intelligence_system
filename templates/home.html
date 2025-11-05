@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Home - Real Estate Insights</title>
+
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#94a3b8; --accent:#10b981; --danger:#ef4444;
+      --glass: rgba(255,255,255,0.03);
+      --max-width:700px;
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color:#e6eef8;
+    }
+    html,body{height:100%; margin:0; padding:32px; background:linear-gradient(180deg,#071021,var(--bg)); box-sizing:border-box;}
+    .wrap-vertical{max-width: var(--max-width); margin: 0 auto; display: grid; gap: 24px;}
+    .card{background: var(--card); border-radius:12px; padding:24px; box-shadow:0 6px 18px rgba(2,6,23,0.6); border:1px solid rgba(255,255,255,0.03);}
+    h1,h2,h3,p{margin:0 0 12px 0;}
+    .navbar{display:flex; gap:20px; padding:12px 0; margin-bottom:24px; border-bottom:1px solid rgba(255,255,255,0.05);}
+    .navbar a{color:var(--muted); text-decoration:none; font-weight:600; padding:6px 12px; border-radius:6px;}
+    .navbar a.active, .navbar a:hover{background:var(--accent); color:#04202b;}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:10px;border:none; background:linear-gradient(90deg,var(--accent),#06b6d4);color:#04202b;font-weight:600;cursor:pointer; box-shadow: 0 6px 16px rgba(16,185,129,0.14);}
+    .muted{color:var(--muted);}
+  </style>
+</head>
+<body>
+
+  <div class="wrap-vertical">
+    <div class="navbar">
+      <a href="/" class="active">Home</a>
+      <a href="/prediction" >House Price Predictor</a>
+      <a href="/dataset_insights">Dataset Insights</a>
+    </div>
+
+    <div class="card">
+      <h1>Welcome to Real Estate Insights</h1>
+      <p class="muted">Explore property data and gain insights into the NSW real estate market.</p>
+
+      <h3>What you can do:</h3>
+      <ul class="muted">
+        <li>View summary statistics and distribution plots for property features.</li>
+        <li>Generate scatterplots to visualize relationships between price and other features.</li>
+        <li>Look up average property metrics by postcode to see trends in different areas.</li>
+      </ul>
+
+      <p>Our platform helps buyers, sellers, and analysts quickly understand property trends, distribution, and average values by area.</p>
+
+      <a href="/dataset_insights" class="btn" style="margin-top:12px;">Go to Dataset Insights</a>
+    </div>
+
+    <div class="card">
+      <h3>Tips for using the site:</h3>
+      <ul class="muted">
+        <li>Select a feature from the dropdown to see its summary statistics and visualization.</li>
+        <li>Type in a postcode to see averages for all numeric property features in that area.</li>
+        <li>Use scatterplots to explore relationships between price and other property features.</li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+data_manager:
+  raw_data_folder: './data/raw/'
+  prod_data_folder: './data/cleaned/'
+  ml_ready_folder: './data/ml-ready/'
+  raw_database_name: 'database.parquet'
+  prod_database_name: 'database_cleaned.parquet'
+  ml_database_name: 'database_ml.parquet'
+  real_time_data_folder: './data/test/'
+  real_time_database_name: 'Test.parquet'
+
+feature_engineering:
+  mapping_path: './data/avg/'
+  mapping_file: 'avg_info.json'
+  
+features:
+  price_per_m2: 'price_per_m2'
+  land_size: 'land_size'
+  city: 'city'
+  dist_to_city: 'dist_to_city'
+  postcode: 'postcode'
+  avg_price_by_postcode: 'avg_price_by_postcode'
+  postcode_avg_price_per_m2: 'postcode_avg_price_per_m2'
+  target_column: 'price'
+  lat: 'lat'
+  lon: 'lon'
+  bedroom_nums: 'bedroom_nums'
+  bathroom_nums: 'bathroom_nums'
+  car_spaces: 'car_spaces'
+
+
+training:
+  train_size: 0.7
+  validation_size: 0.15
+  test_size: 0.15
+
+preprocessing:
+  fill_na_columns: ['bedroom_nums', 'bathroom_nums', 'car_spaces', 'land_size']
+  drop_columns: []
+
+postprocessing:
+  model_path: 'models/prod/latest_model'
